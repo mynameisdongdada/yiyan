@@ -14,7 +14,7 @@ public class SwitchTradeDto {
     private String apiurl;
 
     private String appid;
-
+    //
     private String priKey;
     //
     private Map<String,Object> inputParam;
