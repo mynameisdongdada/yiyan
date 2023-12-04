@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.songguoliang.mybatis.mapper.TextMapper">
+    <resultMap id="BaseResultMap" type="com.songguoliang.mybatis.entity.Text">
+        <id column="uuid" property="uuid" jdbcType="INTEGER"></id>
+        <result column="today" property="today" jdbcType="VARCHAR"></result>
+        <result column="todaytext" property="todaytext" jdbcType="VARCHAR"></result>
+        <result column="author" property="author" jdbcType="VARCHAR"></result>
+        <result column="collection" property="collection" jdbcType="VARCHAR"></result>
+        <result column="chunbj" property="chunbj" jdbcType="VARCHAR"></result>
+        <result column="image" property="image" jdbcType="VARCHAR"></result>
+        <result column="audio" property="audio" jdbcType="VARCHAR"></result>
+        <result column="toyear" property="toyear" jdbcType="VARCHAR"></result>
+        <result column="tomonth" property="tomonth" jdbcType="VARCHAR"></result>
+        <result column="today01" property="today01" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="queryAllText" resultMap="BaseResultMap">
+        SELECT uuid,today,todaytext,author,collection,chunbj,image,audio,toyear,tomonth,today01 FROM text order by uuid desc
+    </select>
+
+    <select id="queryByUuid" resultType="com.songguoliang.mybatis.entity.Text" parameterType="int">
+        SELECT * FROM text where uuid=#{uuid}
+    </select>
+
+</mapper>
