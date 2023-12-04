@@ -16,7 +16,7 @@ public class SwitchTradeDto {
     private String appid;
 
     private String priKey;
-
+    //
     private Map<String,Object> inputParam;
 
     private String interfaceType;
