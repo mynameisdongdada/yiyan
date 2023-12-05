@@ -48,6 +48,7 @@ public class TextController {
     public Map<String, Object> queryByUuid(Integer uuid) {
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("text", textService.queryByUuid(uuid));
+        resultMap.put("flag",detailsService.queryMusicFlag());//查询是否能够显示音乐标志
         return resultMap;
     }
 

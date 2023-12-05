@@ -12,4 +12,6 @@ public interface DetailsMapper {
 
 
     List<Details> queryDetailsByMusic();
+
+    String  queryDetailsByMusicFlag();
 }

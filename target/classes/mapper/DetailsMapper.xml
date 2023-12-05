@@ -20,4 +20,8 @@
     <select id="queryDetailsByMusic" resultMap="BaseResultMap">
         SELECT id,flag,type,link FROM details where flag='1' and type ='2'
     </select>
+
+    <select id="queryDetailsByMusicFlag" resultType="java.lang.String">
+        SELECT flag FROM details where type ='4'
+    </select>
 </mapper>

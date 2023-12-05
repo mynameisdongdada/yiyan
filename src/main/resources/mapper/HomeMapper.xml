@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.songguoliang.mybatis.mapper.HomeMapper">
+
+
+    <select id="queryLastNew" resultType="com.songguoliang.mybatis.entity.Home">
+        SELECT * FROM home ORDER BY uuid desc LIMIT 1
+    </select>
+
+    <select id="queryOneByUuid" resultType="com.songguoliang.mybatis.entity.Home" parameterType="int">
+        SELECT * FROM home where uuid =#{uuid}
+    </select>
+</mapper>

@@ -30,4 +30,9 @@ public class DetailsService {
         return resultMap;
     }
 
+
+    public String queryMusicFlag(){
+        return detailsMapper.queryDetailsByMusicFlag();
+    }
+
 }
