@@ -2,11 +2,15 @@ D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-mas
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\mapper\DetailsMapper.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\TomcatConfig.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\controller\TextController.java
+D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\entity\Home.java
+D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\mapper\HomeMapper.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\MybatisApplication.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\controller\SwtichMain.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\entity\Text.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\service\UserService.java
+D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\controller\HomeController.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\entity\Details.java
+D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\service\HomeService.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\mapper\TextMapper.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\mapper\UserMapper.java
 D:\chromeDownload\spring-boot-mybatis-study-master\spring-boot-mybatis-study-master\src\main\java\com\songguoliang\mybatis\entity\SwitchTradeDto.java
