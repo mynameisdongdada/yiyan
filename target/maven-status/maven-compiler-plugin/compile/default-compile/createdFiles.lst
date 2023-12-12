@@ -1,5 +1,4 @@
 com\songguoliang\mybatis\mapper\UserMapper.class
-com\songguoliang\mybatis\TomcatConfig$1.class
 com\songguoliang\mybatis\service\DetailsService.class
 com\songguoliang\mybatis\entity\Text.class
 com\songguoliang\mybatis\service\UserService.class
@@ -11,7 +10,6 @@ com\songguoliang\mybatis\entity\SwitchTradeDto.class
 com\songguoliang\mybatis\entity\Home.class
 com\songguoliang\mybatis\controller\UserController.class
 com\songguoliang\mybatis\mapper\HomeMapper.class
-com\songguoliang\mybatis\TomcatConfig.class
 com\songguoliang\mybatis\controller\HomeController.class
 com\songguoliang\mybatis\controller\SwtichMain.class
 com\songguoliang\mybatis\entity\Details.class
