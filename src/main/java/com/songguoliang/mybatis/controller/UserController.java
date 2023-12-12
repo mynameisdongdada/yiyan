@@ -1,9 +1,6 @@
 package com.songguoliang.mybatis.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.icbc.api.core.ApiClient;
-import com.icbc.api.core.ApiRequest;
-import com.icbc.api.core.ApiResponse;
+
 import com.songguoliang.mybatis.entity.User;
 import com.songguoliang.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +38,7 @@ public class UserController {
         return  resultMap;
     }
 
-
+/*
     @RequestMapping("/icbcUpload")
     @ResponseBody
     public String icbcUpload(String filePath, String idCardNo){
@@ -105,5 +101,5 @@ public class UserController {
             e.printStackTrace();
         }
         return null;
-    }
+    }*/
 }
