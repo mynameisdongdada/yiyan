@@ -58,4 +58,13 @@ public class TextController {
     public Map<String, Object> queryDetailsByChangWenMusic() {
         return detailsService.queryDetailsByChangWenMusic();
     }
+
+
+    @RequestMapping("/isAudioFlag")
+    @ResponseBody
+    public Map<String, Object> isAudioFlag() {
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("flag",detailsService.queryMusicFlag());//查询是否能够显示音乐标志
+        return resultMap;
+    }
 }
