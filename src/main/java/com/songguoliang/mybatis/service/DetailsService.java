@@ -35,4 +35,7 @@ public class DetailsService {
         return detailsMapper.queryDetailsByMusicFlag();
     }
 
+    public List<Details> queryDetailsByMain() {
+        return detailsMapper.queryDetailsByMain();
+    }
 }

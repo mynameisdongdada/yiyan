@@ -10,8 +10,9 @@ public interface DetailsMapper {
 
     List<Details> queryDetailsByChangWen();
 
-
     List<Details> queryDetailsByMusic();
 
     String  queryDetailsByMusicFlag();
+
+    List<Details> queryDetailsByMain();
 }
