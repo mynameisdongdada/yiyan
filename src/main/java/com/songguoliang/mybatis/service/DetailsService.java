@@ -38,4 +38,9 @@ public class DetailsService {
     public List<Details> queryDetailsByMain() {
         return detailsMapper.queryDetailsByMain();
     }
+
+    public String queryDetailsByTop(){
+        return detailsMapper.queryDetailsByTop();
+    }
+
 }

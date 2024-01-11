@@ -28,4 +28,8 @@
     <select id="queryDetailsByMain" resultMap="BaseResultMap">
         SELECT id,flag,type,link FROM details where flag='1' and type ='5'
     </select>
+
+    <select id="queryDetailsByTop" resultType="java.lang.String">
+        SELECT link FROM details where flag='1' and type ='6'
+    </select>
 </mapper>

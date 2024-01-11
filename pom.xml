@@ -55,28 +55,29 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.46</version>
         </dependency>
-        <dependency>
+
+<!--        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
             <version>4.3.3</version>
-        </dependency>
+        </dependency>-->
 
-        <dependency>
+<!--        <dependency>
             <groupId>com.icbc</groupId>
             <artifactId>api_client_v2.1</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>com.icbc</groupId>
             <artifactId>bcprov-jdk15to18-1</artifactId>
             <version>1.0</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>com.icbc</groupId>
             <artifactId>hsm-software-share-1.1</artifactId>
             <version>1.0</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>

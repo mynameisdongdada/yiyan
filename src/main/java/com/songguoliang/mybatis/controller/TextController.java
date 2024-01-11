@@ -39,6 +39,8 @@ public class TextController {
         }
         List<Details> details = detailsService.queryDetailsByType();
         resultMap.put("details", details);
+        String top = detailsService.queryDetailsByTop();
+        resultMap.put("top", top);
         return resultMap;
     }
 
