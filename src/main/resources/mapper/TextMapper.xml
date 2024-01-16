@@ -16,11 +16,18 @@
     </resultMap>
 
     <select id="queryAllText" resultMap="BaseResultMap">
-        SELECT uuid,today,todaytext,author,collection,chunbj,image,audio,toyear,tomonth,today01 FROM text order by uuid desc
+        SELECT uuid,today,todaytext,author,collection,chunbj,image,audio,toyear,tomonth,today01 FROM text order by uuid desc LIMIT 29
     </select>
 
     <select id="queryByUuid" resultType="com.songguoliang.mybatis.entity.Text" parameterType="int">
         SELECT * FROM text where uuid=#{uuid}
     </select>
 
+    <select id="queryTodayUuid" resultType="com.songguoliang.mybatis.entity.Text" parameterType="String">
+        SELECT * FROM text where today=#{today}
+    </select>
+
+    <select id="queryLessUuid" resultMap="BaseResultMap" parameterType="int">
+        SELECT * FROM text where uuid &lt; #{uuid} order by uuid desc LIMIT 29
+    </select>
 </mapper>

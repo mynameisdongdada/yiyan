@@ -10,5 +10,7 @@ public interface TextMapper {
 
     Text queryByUuid(Integer uuid);
 
+    Text queryTodayUuid(String today);
 
+    List<Text> queryLessUuid(Integer uuid);
 }
