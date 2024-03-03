@@ -4,6 +4,7 @@ import com.songguoliang.mybatis.entity.Text;
 import com.songguoliang.mybatis.mapper.TextMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
 
@@ -43,14 +44,26 @@ public class TextService {
         System.out.println("今日日期:"+todayStr);
         Text text = textMapper.queryTodayUuid(todayStr);
         List<Text> texts=new ArrayList<>();
+        List<String> links=new ArrayList<>();
         if (!ObjectUtils.isEmpty(text)){
             resultMap.put("text", text);
             if("12-07".equals(todayStr)){
                 texts = textMapper.queryLessUuid(365);
+            }else if("12-08".equals(todayStr)){
+                texts = textMapper.queryLessUuid(text.getUuid());
+                Text text1 = textMapper.queryByUuid(365);
+                texts.add(text1);
             }else{
                 texts = textMapper.queryLessUuid(text.getUuid());
             }
-            resultMap.put("testList", texts);
+            if(!CollectionUtils.isEmpty(texts)){
+                int size=texts.size();
+                links.add(texts.get(size-2).getChunbj());
+                links.add(texts.get(size-1).getChunbj());
+                links.add(text.getChunbj());
+                resultMap.put("details",links);
+                resultMap.put("testList", texts);
+            }
         }else{
             texts = textMapper.queryAllText();
             Text text1 = texts.get(0);

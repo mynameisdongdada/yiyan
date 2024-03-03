@@ -28,7 +28,7 @@ public class TextController {
     @ResponseBody
     public Map<String, Object> queryAllText() {
         Map<String, Object> resultMap = new HashMap<>();
-        /*List<Text> texts = textService.queryAllText();
+        List<Text> texts = textService.queryAllText();
         if(!CollectionUtils.isEmpty(texts)){
             Text text = texts.get(0);
             resultMap.put("text", text);
@@ -36,13 +36,20 @@ public class TextController {
                 texts.remove(0);
                 resultMap.put("testList", texts);
             }
-        }*/
-        Map<String, Object> stringObjectMap = textService.queryTodayText();
-        resultMap.putAll(stringObjectMap);
+        }
         List<Details> details = detailsService.queryDetailsByType();
         resultMap.put("details", details);
         String top = detailsService.queryDetailsByTop();
         resultMap.put("top", top);
+        return resultMap;
+    }
+
+    @RequestMapping("/queryAllTextNew")
+    @ResponseBody
+    public Map<String, Object> queryAllTextNew() {
+        Map<String, Object> resultMap = new HashMap<>();
+        Map<String, Object> stringObjectMap = textService.queryTodayText();
+        resultMap.putAll(stringObjectMap);
         return resultMap;
     }
 

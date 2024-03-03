@@ -16,7 +16,7 @@
     </resultMap>
 
     <select id="queryAllText" resultMap="BaseResultMap">
-        SELECT uuid,today,todaytext,author,collection,chunbj,image,audio,toyear,tomonth,today01 FROM text order by uuid desc LIMIT 29
+        SELECT uuid,today,todaytext,author,collection,chunbj,image,audio,toyear,tomonth,today01 FROM text order by uuid desc LIMIT 40
     </select>
 
     <select id="queryByUuid" resultType="com.songguoliang.mybatis.entity.Text" parameterType="int">
