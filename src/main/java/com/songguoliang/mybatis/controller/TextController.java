@@ -28,6 +28,10 @@ public class TextController {
     @ResponseBody
     public Map<String, Object> queryAllText() {
         Map<String, Object> resultMap = new HashMap<>();
+        String audioFlag = detailsService.queryMusicFlag();
+        if(!"1".equals(audioFlag)){
+            return resultMap;
+        }
         List<Text> texts = textService.queryAllText();
         if(!CollectionUtils.isEmpty(texts)){
             Text text = texts.get(0);
