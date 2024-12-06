@@ -13,4 +13,6 @@ public interface TextMapper {
     Text queryTodayUuid(String today);
 
     List<Text> queryLessUuid(Integer uuid);
+
+    int updateYear(String toyear,Integer uuid);
 }

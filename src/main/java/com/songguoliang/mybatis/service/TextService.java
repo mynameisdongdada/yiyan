@@ -46,7 +46,15 @@ public class TextService {
         List<Text> texts=new ArrayList<>();
         List<String> links=new ArrayList<>();
         if (!ObjectUtils.isEmpty(text)){
-            resultMap.put("text", text);
+            DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy");
+            String year = today.format(formatter1);
+           if(year.equals(text.getToyear())){
+               resultMap.put("text", text);
+           }else{
+               text.setToyear(year);
+               textMapper.updateYear(year,text.getUuid());
+               resultMap.put("text", text);
+           }
             if("12-07".equals(todayStr)){
                 texts = textMapper.queryLessUuid(365);
             }else if("12-08".equals(todayStr)){
@@ -57,11 +65,11 @@ public class TextService {
                 texts = textMapper.queryLessUuid(text.getUuid());
             }
             if(!CollectionUtils.isEmpty(texts)){
-                int size=texts.size();
+                /*int size=texts.size();
                 links.add(texts.get(size-2).getChunbj());
                 links.add(texts.get(size-1).getChunbj());
                 links.add(text.getChunbj());
-                resultMap.put("details",links);
+                resultMap.put("details",links);*/
                 resultMap.put("testList", texts);
             }
         }else{

@@ -29,22 +29,22 @@ public class TextController {
     public Map<String, Object> queryAllText() {
         Map<String, Object> resultMap = new HashMap<>();
         String audioFlag = detailsService.queryMusicFlag();
-        if(!"1".equals(audioFlag)){
-            return resultMap;
-        }
         List<Text> texts = textService.queryAllText();
-        if(!CollectionUtils.isEmpty(texts)){
+        Map<String, Object> stringObjectMap = textService.queryTodayText();
+        resultMap.putAll(stringObjectMap);
+        /*if(!CollectionUtils.isEmpty(texts)){
             Text text = texts.get(0);
             resultMap.put("text", text);
             if (texts.size() > 1) {
                 texts.remove(0);
                 resultMap.put("testList", texts);
             }
-        }
+        }*/
         List<Details> details = detailsService.queryDetailsByType();
         resultMap.put("details", details);
         String top = detailsService.queryDetailsByTop();
         resultMap.put("top", top);
+        resultMap.put("audioFlag",audioFlag);
         return resultMap;
     }
 
