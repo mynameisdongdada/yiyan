@@ -31,7 +31,7 @@
         SELECT * FROM text where uuid &lt; #{uuid} order by uuid desc LIMIT 49
     </select>
 
-    <update id="updateYear" parameterType="String">
+    <update id="updateYear">
         UPDATE text set toyear=#{toyear} where uuid=#{uuid}
     </update>
 

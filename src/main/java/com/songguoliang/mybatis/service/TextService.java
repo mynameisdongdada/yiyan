@@ -10,10 +10,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class TextService {
@@ -43,8 +40,7 @@ public class TextService {
         String todayStr = today.format(formatter);
         System.out.println("今日日期:"+todayStr);
         Text text = textMapper.queryTodayUuid(todayStr);
-        List<Text> texts=new ArrayList<>();
-        List<String> links=new ArrayList<>();
+        List<Text> texts=new LinkedList<>();
         if (!ObjectUtils.isEmpty(text)){
             DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy");
             String year = today.format(formatter1);
@@ -56,11 +52,35 @@ public class TextService {
                resultMap.put("text", text);
            }
             if("12-07".equals(todayStr)){
-                texts = textMapper.queryLessUuid(365);
+                texts = textMapper.queryLessUuid(369);
             }else if("12-08".equals(todayStr)){
-                texts = textMapper.queryLessUuid(text.getUuid());
-                Text text1 = textMapper.queryByUuid(365);
+                Text text1 = textMapper.queryByUuid(1);
                 texts.add(text1);
+                texts.addAll(textMapper.queryLessUuid(369));
+            }else if("12-09".equals(todayStr)){
+                Text text1 = textMapper.queryByUuid(1);
+                Text text2 = textMapper.queryByUuid(2);
+                texts.add(text1);
+                texts.add(text2);
+                texts.addAll(textMapper.queryLessUuid(369));
+            }else if("12-10".equals(todayStr)){
+                Text text1 = textMapper.queryByUuid(1);
+                Text text2 = textMapper.queryByUuid(2);
+                Text text3 = textMapper.queryByUuid(3);
+                texts.add(text1);
+                texts.add(text2);
+                texts.add(text3);
+                texts.addAll(textMapper.queryLessUuid(369));
+            }else if("12-11".equals(todayStr)){
+                Text text1 = textMapper.queryByUuid(1);
+                Text text2 = textMapper.queryByUuid(2);
+                Text text3 = textMapper.queryByUuid(3);
+                Text text4 = textMapper.queryByUuid(4);
+                texts.add(text1);
+                texts.add(text2);
+                texts.add(text3);
+                texts.add(text4);
+                texts.addAll(textMapper.queryLessUuid(369));
             }else{
                 texts = textMapper.queryLessUuid(text.getUuid());
             }
