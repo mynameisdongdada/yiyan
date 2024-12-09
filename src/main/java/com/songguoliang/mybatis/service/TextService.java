@@ -60,26 +60,26 @@ public class TextService {
             }else if("12-09".equals(todayStr)){
                 Text text1 = textMapper.queryByUuid(1);
                 Text text2 = textMapper.queryByUuid(2);
-                texts.add(text1);
                 texts.add(text2);
+                texts.add(text1);
                 texts.addAll(textMapper.queryLessUuid(369));
             }else if("12-10".equals(todayStr)){
                 Text text1 = textMapper.queryByUuid(1);
                 Text text2 = textMapper.queryByUuid(2);
                 Text text3 = textMapper.queryByUuid(3);
-                texts.add(text1);
-                texts.add(text2);
                 texts.add(text3);
+                texts.add(text2);
+                texts.add(text1);
                 texts.addAll(textMapper.queryLessUuid(369));
             }else if("12-11".equals(todayStr)){
                 Text text1 = textMapper.queryByUuid(1);
                 Text text2 = textMapper.queryByUuid(2);
                 Text text3 = textMapper.queryByUuid(3);
                 Text text4 = textMapper.queryByUuid(4);
-                texts.add(text1);
-                texts.add(text2);
-                texts.add(text3);
                 texts.add(text4);
+                texts.add(text3);
+                texts.add(text2);
+                texts.add(text1);
                 texts.addAll(textMapper.queryLessUuid(369));
             }else{
                 texts = textMapper.queryLessUuid(text.getUuid());
